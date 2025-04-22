@@ -9,3 +9,10 @@ body {
   margin: 0;
   background-color: var(--tertiary);
 }
+
+main {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}

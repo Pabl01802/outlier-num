@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { outlierNum } from "./outlinerNumber";
+import { outlierNum } from "./outlierNumber";
 
 describe("outlierNum", () => {
   it("returns outliner number from given array", () => {
