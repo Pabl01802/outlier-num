@@ -31,4 +31,7 @@ button {
 button:focus {
   outline-color: var(--secondary);
 }
+button:hover {
+  cursor: pointer;
+}
 </style>
