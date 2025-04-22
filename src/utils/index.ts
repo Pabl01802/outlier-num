@@ -1,1 +1,1 @@
-export * from "./outlineNumber";
+export * from "./outlinerNumber";
