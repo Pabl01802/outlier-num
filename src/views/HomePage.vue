@@ -48,9 +48,14 @@ const searchOutlierNumber = () => {
       <CustomInput
         v-model="numbers"
         class="numbers-input"
+        aria-label="Wprowadź liczby"
         @enter="searchOutlierNumber"
       />
-      <Button @click="searchOutlierNumber">Wyszukaj</Button>
+      <Button
+        @click="searchOutlierNumber"
+        aria-label="Wyszukaj odstającą liczbę"
+        >Wyszukaj</Button
+      >
     </section>
   </main>
 </template>
