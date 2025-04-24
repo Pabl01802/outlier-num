@@ -14,6 +14,8 @@ odstającą liczę z podanych, w tym przypadku <strong>11</strong>, bo jest to j
 - 🌐 **Vue Router** – routing aplikacji SPA
 - 🔔 **Vue Toastification** – powiadomienia toast
 - ✅ **Vitest** – szybkie i lekkie testy jednostkowe
+- 🍍 **Pinia** - do zarządzania globalnym stanem
+- 🌍 **i18n** - tłumaczenie tekstu
 
 ## 🚀 Szybki start
 
@@ -42,6 +44,9 @@ odstającą liczę z podanych, w tym przypadku <strong>11</strong>, bo jest to j
 
 - **/src**: Cała struktura projektu, czyli komponenty, widoki itd.
   - **/components**: Komponenty
+  - **/hooks**: Custom hooki
+      - **/stores**: Globalne stany
+  - **/locales**: Tłumaczenia tekstu
   - **/router**: Routing aplikacji
   - **/utils**: Pomocnicze funkcje, w przypadku tego projektu algorytm oraz jego test
   - **/views**: Widoki aplikacji
