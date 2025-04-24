@@ -1,0 +1,23 @@
+{
+  "TITLE": "Find and outlier number",
+  "PAGES": {
+    "HOME": {
+      "SEARCH": "Search"
+    }
+  },
+  "TOAST": {
+    "ERROR": {
+      "ENTER_CORRECT_SEQ": "Enter a correct sequence",
+      "INCORRECT_SEQ": "Incorrect numbers sequence was provided",
+      "SEQ_LENGTH": "Sequence must be at least 3 numbers long",
+      "NO_OUTLIER": "No outlier"
+    }
+  },
+  "ARIA": {
+    "SEARCH_OUTLIER": "Search for an outlier number",
+    "ENTER_NUMBERS": "Enter numbers"
+  },
+  "LANGUAGES": {
+    "LANGUAGE": "Language"
+  }
+}

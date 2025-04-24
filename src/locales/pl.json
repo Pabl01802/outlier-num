@@ -1,0 +1,23 @@
+{
+  "TITLE": "Znajdź odstającą liczbę",
+  "PAGES": {
+    "HOME": {
+      "SEARCH": "Wyszukaj"
+    }
+  },
+  "TOAST": {
+    "ERROR": {
+      "ENTER_CORRECT_SEQ": "Podaj poprawny ciąg liczb",
+      "INCORRECT_SEQ": "Wprowadzono niepoprawny ciąg znaków",
+      "SEQ_LENGTH": "Ciąg musi zawierać min. 3 liczby",
+      "NO_OUTLIER": "Żadna liczba nie odstaje"
+    }
+  },
+  "ARIA": {
+    "SEARCH_OUTLIER": "Znajdź odstającą liczbę",
+    "ENTER_NUMBERS": "Wprowadź liczby"
+  },
+  "LANGUAGES": {
+    "LANGUAGE": "Język"
+  }
+}

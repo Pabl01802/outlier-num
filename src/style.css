@@ -3,11 +3,17 @@
   --primary: #9acbd0;
   --secondary: #006a71;
   --tertiary: #f2efe7;
+
+  --transition: 0.2s;
 }
 
 body {
   margin: 0;
   background-color: var(--tertiary);
+}
+
+p {
+  margin: 0;
 }
 
 main {
