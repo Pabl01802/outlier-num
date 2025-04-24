@@ -5,6 +5,7 @@ Aplikacja frontendowa polagająca na znalezieniu odstającej liczby. Jak to dzia
 przycisku "Wyszukaj" lub kliknięciu Enter na klawiaturze przekieruje Cię na podstronę, na której znajdziesz 
 odstającą liczę z podanych, w tym przypadku <strong>11</strong>, bo jest to jedyna liczba nieparzysta.
 - po podaniu takiego ciągu cyfr: <strong>160, 3, 1719, 19, 11, 13, -21</strong> wypisane zostanie <strong>160</strong> bo to jedyna parzysta liczba.
+- <strong>wyjątkowy ciąg:</strong> w przypadku wpisania specjalnego ciągu <strong>"1, 2, 3, 4, 5"</strong> pojawi się komunikat, że jest on <strong>niepoprawny</strong>
 
 ## 📦 Technologie
 
