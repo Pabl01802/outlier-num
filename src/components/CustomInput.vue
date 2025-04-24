@@ -10,24 +10,21 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits, type InputTypeHTMLAttribute } from "vue";
+import { defineProps, defineEmits, type InputTypeHTMLAttribute } from "vue"
 
 const props = defineProps<{
-  disabled?: boolean;
-  type?: InputTypeHTMLAttribute;
-}>();
+  disabled?: boolean
+  type?: InputTypeHTMLAttribute
+}>()
 
-const emit = defineEmits(["update:modelValue", "enter"]);
+const emit = defineEmits(["update:modelValue", "enter"])
 
 const handleEnter = () => {
-  emit("enter");
-};
+  emit("enter")
+}
 </script>
 
 <style scoped>
-input {
-  padding: 5px;
-}
 input:focus {
   outline-color: var(--secondary);
 }

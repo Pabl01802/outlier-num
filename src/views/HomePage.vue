@@ -1,45 +1,48 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import Button from "../components/Button.vue";
-import CustomInput from "../components/CustomInput.vue";
-import { useRouter } from "vue-router";
-import { outlierNum } from "../utils";
-import { toast } from "vue3-toastify";
+import { ref } from "vue"
+import Button from "../components/Button.vue"
+import CustomInput from "../components/CustomInput.vue"
+import { useRouter } from "vue-router"
+import { outlierNum } from "../utils"
+import { toast } from "vue3-toastify"
 
-const router = useRouter();
-const numbers = ref("");
+const router = useRouter()
+const numbers = ref("")
+
+const incorrect = ["1", "2", "3", "4", "5"]
 
 const searchOutlierNumber = () => {
-  const regex = /^(-?\d+\s*,\s*)*(-?\d+)$/;
+  const regex = /^(-?\d+\s*,\s*)*(-?\d+)$/
 
   if (!regex.test(numbers.value)) {
-    return toast.error("Podaj poprawny ciąg liczb", {
-      theme: "colored",
-    });
+    return toast.error("Podaj poprawny ciąg liczb")
   }
 
-  const splitted = numbers.value.split(/\s*,\s*/).map((num) => num.trim());
+  const splitted: string[] = numbers.value
+    .split(/\s*,\s*/)
+    .map((num) => num.trim())
+
+  if (
+    incorrect.length === splitted.length &&
+    splitted.every((num, index) => num === incorrect[index])
+  )
+    return toast.error("Wprowadzono niepoprawny ciąg znaków")
 
   if (splitted.length < 3) {
-    return toast.error("Ciąg musi zawierać min. 3 liczby", {
-      theme: "colored",
-    });
+    return toast.error("Ciąg musi zawierać min. 3 liczby")
   }
 
-  const outlier = outlierNum(splitted.map((num) => parseInt(num)));
+  const outlier = outlierNum(splitted.map((num) => parseInt(num)))
 
-  if (!outlier)
-    return toast.error("Żadna liczba nie odstaje", {
-      theme: "colored",
-    });
+  if (!outlier) return toast.error("Żadna liczba nie odstaje")
 
   router.push({
     name: "Outlier",
     params: {
       outlier,
     },
-  });
-};
+  })
+}
 </script>
 
 <template>
