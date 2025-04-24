@@ -5,11 +5,16 @@ import CustomInput from "../components/CustomInput.vue"
 import { useRouter } from "vue-router"
 import { outlierNum } from "../utils"
 import { toast } from "vue3-toastify"
+import { useOutlierStore } from "../hooks/stores/useOutlierStore"
 
 const router = useRouter()
 const numbers = ref("")
 
 const incorrect = ["1", "2", "3", "4", "5"]
+
+const { outlier, setOutlier, reset } = useOutlierStore()
+
+if (outlier) reset()
 
 const searchOutlierNumber = () => {
   const regex = /^(-?\d+\s*,\s*)*(-?\d+)$/
@@ -32,15 +37,14 @@ const searchOutlierNumber = () => {
     return toast.error("Ciąg musi zawierać min. 3 liczby")
   }
 
-  const outlier = outlierNum(splitted.map((num) => parseInt(num)))
+  const outlierNumber = outlierNum(splitted.map((num) => parseInt(num)))
 
-  if (!outlier) return toast.error("Żadna liczba nie odstaje")
+  if (!outlierNumber) return toast.error("Żadna liczba nie odstaje")
+
+  setOutlier(outlierNumber)
 
   router.push({
     name: "Outlier",
-    params: {
-      outlier,
-    },
   })
 }
 </script>

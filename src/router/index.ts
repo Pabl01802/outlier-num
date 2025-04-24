@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory } from "vue-router";
-import HomePage from "../views/HomePage.vue";
-import OutlierPage from "../views/OutlierPage.vue";
+import { createRouter, createWebHistory } from "vue-router"
+import HomePage from "../views/HomePage.vue"
+import OutlierPage from "../views/OutlierPage.vue"
 
 const routes = [
   {
@@ -9,15 +9,15 @@ const routes = [
     component: HomePage,
   },
   {
-    path: "/outlier/:outlier",
+    path: "/outlier",
     name: "Outlier",
     component: OutlierPage,
   },
-];
+]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-});
+})
 
-export default router;
+export default router

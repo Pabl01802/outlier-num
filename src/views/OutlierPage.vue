@@ -1,20 +1,18 @@
 <script setup lang="ts">
-import { useRoute, useRouter } from "vue-router";
+import { useRouter } from "vue-router"
+import { useOutlierStore } from "../hooks/stores/useOutlierStore"
 
-const router = useRouter();
-const route = useRoute();
+const router = useRouter()
 
-if (
-  route.params.outlier &&
-  Number.isNaN(parseInt(route.params.outlier as string))
-)
-  router.replace("/");
+const { outlier } = useOutlierStore()
+
+if (!outlier) router.replace("/")
 </script>
 
 <template>
   <main>
     <h1>
-      {{ route.params.outlier }}
+      {{ outlier }}
     </h1>
   </main>
 </template>
